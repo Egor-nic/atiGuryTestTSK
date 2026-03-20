@@ -1,0 +1,215 @@
+/* Table.module.scss */
+
+.container {
+  width: 100%;
+}
+
+.progressContainer {
+  height: 6px;
+  background: #ededed;
+  margin-bottom: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBar {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, #242edb, #5f79ff);
+  animation: progress 1.8s linear infinite;
+}
+
+@keyframes progress {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+.controls {
+  padding: 0px 30px;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.iconAction {
+  border: 1px solid #e2e2e2;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.searchInput {
+  // padding: 12px 20px; Нужно сделать для инпута size
+  // border-radius: 8px;
+  background-color: #F3F3F3;
+}
+
+.searchInputWrapper {
+  margin: 0 auto;
+  max-width: 1023px;
+  flex: 1;
+}
+
+.tableWrapper {
+  padding: 30px;
+  
+  background-color: #ffffff;
+
+  .tableHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.errorText {
+  color: #d32f2f;
+  margin: 8px 0 0;
+}
+
+.addButton {
+  padding: 12px 24px;
+  background: #242edb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.addPlusIcon {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.tableHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sortGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sortPair {
+  display: flex;
+  gap: 8px;
+}
+
+.table {
+  width: 100%;
+}
+
+.th {
+  padding: 16px;
+  text-align: left;
+  color: #828282;
+;
+  // background: #f8f9fa;
+  // border-bottom: 2px solid #ddd;
+  cursor: pointer;
+  user-select: none;
+}
+
+.th:hover {
+  background: #f0f0f0;
+}
+
+.td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.actionCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.plusButton {
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  border: none;
+  background: #242edb;
+  color: #fff;
+}
+
+.stubButton {
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.red {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.nameCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.productThumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #f3f3f3;
+}
+
+.nameText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.productTitle {
+  font-weight: 600;
+  color: #232323;
+}
+
+.productCategory {
+  color: #9c9c9c;
+  font-size: 13px;
+}
+
+.row {
+  padding: 0px 18px;
+  border-bottom: 2px solid #E2E2E2;
+}
+
+.redRow {
+  padding: 0px 18px;
+  border-bottom: 2px solid #E2E2E2;
+  background-color: #ffe6e6 !important;
+}
+
+
+
+
+

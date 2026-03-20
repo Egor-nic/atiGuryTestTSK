@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import type { ReactElement } from 'react';
 import './App.css';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import Main from './pages/Main/ui/Main';
+import Auth from './pages/Auth/Page';
+import { getAuthToken } from './shared/auth/session';
+
+function ProtectedRoute({ children }: { children: ReactElement }) {
+  const token = getAuthToken();
+  if (!token) {
+    return <Navigate to="/auth" replace />;
+  }
+
+  return children;
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/auth" element={<Auth />} />
+        <Route
+          path="/main"
+          element={
+            <ProtectedRoute>
+              <Main />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="*" element={<Navigate to={getAuthToken() ? '/main' : '/auth'} replace />} />
+      </Routes>
     </div>
   );
 }

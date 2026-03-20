@@ -1,0 +1,79 @@
+/* === ПАГИНАЦИЯ === */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 0px 30px;
+}
+
+.pageControls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.pageArrow {
+  padding: 10px 14px;
+  background: #d9d9d9;
+  color: #606060;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  min-width: 44px;
+
+  &:disabled {
+    background: #e9e9e9;
+    cursor: not-allowed;
+    color: #8a8a8a;
+  }
+}
+
+.pageNumbers {
+  display: flex;
+  gap: 6px;
+}
+
+.pageNumber {
+  padding: 10px 14px;
+  border: 1px solid #e2e2e2;
+  background: #f1f1f1;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  min-width: 40px;
+  text-align: center;
+}
+
+.pageNumber:hover {
+  background: #eaeaea;
+}
+
+.active {
+  background: #2196f3;
+  color: white;
+  border-color: #2196f3;
+}
+
+.pageInfo {
+  font-size: 15px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.pageSizeSelect {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+}
+
+.ellipsis {
+  padding: 10px 14px;
+  color: #777;
+  font-weight: bold;
+  user-select: none;
+}

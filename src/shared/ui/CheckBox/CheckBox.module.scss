@@ -1,0 +1,60 @@
+.checkboxContainer {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hiddenInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkmark {
+  height: 24px; /* Размер можно подправить под макет */
+  width: 24px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.2s ease;
+  
+  /* Эффект вдавленности (Inner Shadow из Figma) */
+  box-shadow: 
+    inset 0px 2px 4px rgba(0, 0, 0, 0.1), /* Тень сверху внутри */
+    inset 0px -1px 1px rgba(0, 0, 0, 0.05), /* Легкий контур снизу */
+    0px 1px 2px rgba(255, 255, 255, 0.8);  /* Внешний блик для объема */
+  
+  border: 1px solid #E0E0E0; /* Светлая обводка */
+}
+
+/* Состояние при наведении */
+.checkboxContainer:hover .checkmark {
+  border-color: #D1D1D1;
+  background-color: #F9F9F9;
+}
+
+/* Галочка (появляется при checked) */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid #333; /* Цвет галочки */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.hiddenInput:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* Активное состояние (чуть сильнее вдавливается) */
+.hiddenInput:checked ~ .checkmark {
+  background-color: #F0F0F0;
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.15);
+}

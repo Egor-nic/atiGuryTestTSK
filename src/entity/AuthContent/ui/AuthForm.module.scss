@@ -1,0 +1,73 @@
+.form {
+  border-radius: 23px;
+
+  .inputsWrapper {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .removeInputValueButton,
+    .showPasswordButton {
+      border: none;
+      background-color: inherit;
+    }
+
+  }
+
+  .checkBox {
+    margin-bottom: 20px;
+
+    span {
+      color: #9C9C9C;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+
+  .button {
+    margin-bottom: 16px;
+    width: 100%;
+    display: block;
+  }
+
+  .errorText {
+    margin: -8px 0 0;
+    color: #d32f2f;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .orComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &> :nth-child(1) {
+      height: 1px;
+      width: 100%;
+      background-color: #EDEDED;
+    }
+
+    &> :nth-child(2) {
+      text-transform: uppercase;
+      background: linear-gradient(180deg, #757575 0%, #BDBDBD 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      line-height: 150%;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    // Стили для ТРЕТЬЕГО ребенка
+    &> :nth-child(3) {
+      height: 1px;
+      width: 100%;
+      background-color: #EDEDED;
+    }
+  }
+}
