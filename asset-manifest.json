@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/atiGuryTestTSK.git/static/css/main.380ef820.css",
+    "main.js": "/atiGuryTestTSK.git/static/js/main.e6eb1ca7.js",
+    "static/js/453.43a5fe21.chunk.js": "/atiGuryTestTSK.git/static/js/453.43a5fe21.chunk.js",
+    "index.html": "/atiGuryTestTSK.git/index.html",
+    "main.380ef820.css.map": "/atiGuryTestTSK.git/static/css/main.380ef820.css.map",
+    "main.e6eb1ca7.js.map": "/atiGuryTestTSK.git/static/js/main.e6eb1ca7.js.map",
+    "453.43a5fe21.chunk.js.map": "/atiGuryTestTSK.git/static/js/453.43a5fe21.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.380ef820.css",
+    "static/js/main.e6eb1ca7.js"
+  ]
+}
